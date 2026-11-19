@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: hermes-dashboard
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: HERMES_DASHBOARD_BASIC_AUTH_USERNAME
+        value: admin
+      - key: HERMES_DASHBOARD_BASIC_AUTH_PASSWORD
+        sync: false
+      - key: HERMES_DASHBOARD_BASIC_AUTH_SECRET
+        sync: false
